@@ -4,9 +4,9 @@ import { Button } from './FeedbackOptions.styled';
 const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   return (
     <>
-      {options.map(option => (
-        <Button type="button" onClick={() => onLeaveFeedback(option)}>
-          {option.charAt(0).toUpperCase() + option.slice(1)}
+      {options.map((option, idx) => (
+        <Button key={idx} type="button" onClick={() => onLeaveFeedback(option)}>
+          {option}
         </Button>
       ))}
     </>
